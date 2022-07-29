@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operações Matemáticas Básicas</title>
+    <style>
+        body {background-color: rgb(3, 139, 3);
+            font: normal 25pt Arial;
+        }
+        input{ 
+            font: 15pt arial;
+            width: 120px;
+        }
+        div#res{ 
+            margin-top: 35px;
+        }
+        div#re{
+            margin-top: 35px;
+        }
+        div#resu{
+            margin-top: 35px;
+        }
+        div#resul{
+            margin-top: 35px;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>Somando Valores</h3>
+    <input type="number" name="txtn1" id="txtn1"> +    
+    <input type="number" name="txtn2" id="txtn2"> =
+    <input type="button" value="Somar" onclick="somar()">       
+    <div id="res">Resultado </div>
+
+    <h3>Subtraindo valores</h3>
+    <input type="number" name="txtm1" id="txtm1"> -
+    <input type="number" name="txtm2" id="txtm2"> =
+    <input type="button" value="Subtrair" onclick="subtrair()">
+    <div id="re">Resultado</div>
+
+    <h3>Dividindo Valores</h3>
+    <input type="number" name="txtd1" id="txtd1"> /
+    <input type="number" name="txtd2" id="txtd2"> =
+    <input type="button" value="Dividir" onclick="dividir()">
+    <div id="resu">Resultado</div>
+    
+    <h3>Multiplicando Valores</h3>
+    <input type="number" name="txtb1" id="txtb1"> x
+    <input type="number" name="txtb2" id="txtb2"> =
+    <input type="button" value="Multiplicar" onclick="multiplicar()">
+    <div id="resul">Resultado</div>
+
+    <script>
+        function somar() {
+            console.log('Somar')
+            var tn1= document.querySelector('#txtn1') 
+            var tn2= document.querySelector('#txtn2')
+            var n1= Number(tn1.value)
+            var n2= Number(tn2.value)
+            var s= n1+n2
+            console.log(s)
+            document.querySelector('#res').innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+                
+        }
+
+        function subtrair() {
+            console.log('Subtrair')
+            var tm1= document.querySelector('#txtm1')
+            var tm2= document.querySelector('#txtm2')
+            var m1= Number(tm1.value)
+            var m2= Number(tm2.value)
+            var sub= m1-m2
+            console.log(sub)
+            document.querySelector('#re').innerHTML= `A diferença entre ${m1} e ${m2} é igual a <strong>${sub}</strong>` 
+        }
+        
+        function dividir() {
+            console.log('Dividir')
+            var td1= document.querySelector('#txtd1')
+            var td2= document.querySelector('#txtd2')
+            var d1= Number(td1.value)
+            var d2= Number(td2.value)
+            var d= d1/d2
+            console.log(d)
+            document.querySelector('#resu').innerHTML= `A divisão entre ${d1} e ${d2} é igual a <strong>${d}</strong>`
+        }
+
+        function multiplicar() {
+            console.log('Multiplicar')
+            var tb1= document.querySelector('#txtb1')
+            var tb2= document.querySelector('#txtb2')
+            var b1= Number(tb1.value)
+            var b2= Number(tb2.value)
+            var mult= b1*b2
+            console.log(mult)
+            document.querySelector('#resul').innerHTML= `A multiplicação entre ${b1} e ${b2} é igual a <strong>${mult}</strong>`
+        }
+
+    </script>
+</body>
+</html>
+
+
+
+
+
